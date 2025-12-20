@@ -16,6 +16,11 @@
 
 // Використовуй метод includes() для перевірки, чи масив friends містить friendName.
 
+const getUsersWithFriend = (users, friendName) => {
+  const userFriend = users.filter(user => user.friends.includes(friendName));
+  return userFriend;
+};
+
 const allUsers = [
   {
     name: 'Moore Hensley',
@@ -50,25 +55,25 @@ const allUsers = [
 console.log(getUsersWithFriend(allUsers, 'Briana Decker'));
 // [
 //   {
-//     name: "Sharlene Bush",
-//     friends: ["Briana Decker", "Sharron Pace"]
+//     name: 'Sharlene Bush',
+//     friends: ['Briana Decker', 'Sharron Pace'],
 //   },
 //   {
-//     name: "Sheree Anthony",
-//     friends: ["Goldie Gentry", "Briana Decker"]
-//   }
-// ]
+//     name: 'Sheree Anthony',
+//     friends: ['Goldie Gentry', 'Briana Decker'],
+//   },
+// ];
 
 console.log(getUsersWithFriend(allUsers, 'Goldie Gentry'));
 // [
 //   {
-//     name: "Elma Head",
-//     friends: ["Goldie Gentry", "Aisha Tran"]
+//     name: 'Elma Head',
+//     friends: ['Goldie Gentry', 'Aisha Tran'],
 //   },
 //   {
-//     name: "Sheree Anthony",
-//     friends: ["Goldie Gentry", "Briana Decker"]
-//   }
-// ]
+//     name: 'Sheree Anthony',
+//     friends: ['Goldie Gentry', 'Briana Decker'],
+//   },
+// ];
 
 console.log(getUsersWithFriend(allUsers, 'Adrian Cross')); // []
